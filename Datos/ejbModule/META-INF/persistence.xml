@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Datos">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	<jta-data-source>java:/ourleague</jta-data-source>
+	<class>model.Boleta</class>
+	<class>model.BoletaPK</class>
+	<class>model.Cliente</class>
+	<class>model.ClientePK</class>
+	<class>model.Cupondescuento</class>
+	<class>model.CupondescuentoPK</class>
+	<class>model.Equipo</class>
+	<class>model.Estadio</class>
+	<class>model.Localidad</class>
+	<class>model.LocalidadPK</class>
+	<class>model.Partido</class>
+	<class>model.PartidoPK</class>
+	<class>model.Silla</class>
+	<class>model.SillaPK</class>
+	<class>model.Sillapartido</class>
+	<class>model.SillapartidoPK</class>
+	<class>model.Tarjetacredito</class>
+	<class>model.TarjetacreditoPK</class>
+	</persistence-unit>
+</persistence>
