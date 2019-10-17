@@ -15,10 +15,6 @@
 			<from-outcome>ingreso</from-outcome>
 			<to-view-id>/ingreso.xhtml</to-view-id>
 		</navigation-case>
-		<navigation-case>
-			<from-outcome>adicionarUsuarios</from-outcome>
-			<to-view-id>/adicionarUsuarios.xhtml</to-view-id>
-		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>ingreso.xhtml</display-name>
@@ -31,6 +27,10 @@
 	<navigation-rule>
 		<display-name>ingreso.xhtml</display-name>
 		<from-view-id>/ingreso.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>adicionarUsuarios</from-outcome>
+			<to-view-id>/adicionarUsuarios.xhtml</to-view-id>
+		</navigation-case>
 		<navigation-case>
 			<from-outcome>exito</from-outcome>
 			<to-view-id>/loginExito.xhtml</to-view-id>

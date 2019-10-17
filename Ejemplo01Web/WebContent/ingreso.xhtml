@@ -51,9 +51,21 @@
 	    	<div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
 				<h:commandButton class="btn btn-primary" value="Login"  style="margin-top:8px;"
 			action="#{controlador.validarUsuario()}"></h:commandButton>
+			
 		</div>
   			</div>
+  			
 	</h:form>
+	<h:form>
+	<div class="row justify-content-center align-items-center h-100" >
+	    	<div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+			<h:commandLink class="btn btn-primary" value="Registro" style="margin-top:8px;" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="2" />
+					</h:commandLink>
+	</div>
+  			</div>
+	</h:form>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" type="text/javascript"
     xml:space="preserve"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
