@@ -6,35 +6,55 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <head>
-<title>Pagina de inicio</title>
-<style type="text/css" media="screen">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous" />
+	<style type="text/css" media="screen">
 @import 'style.css';
 </style>
+<title>Pagina de inicio</title>
 </head>
 
 <body>
-	<div id="header">
-		<div id="logo">
-			<h1>Arquitectura de Software</h1>
-			<br></br>
-			<h2 class="title">Ejemplo JSF + JavaBeans + EJBs + JPA</h2>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	<div class="container">
+		<a class="navbar-brand" href="#"> <img
+			src="images/tick.jpg" alt="Logo" style ="width:60px;border-radius:10%"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarResponsive" aria-controls="navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<h:form>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				
+					<li class="nav-item active"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+							value="Login">
+							<f:param name="pageId" value="1" />
+						</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Registro" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="2" />
+					</h:commandLink></li>
+			
+			</ul>
+				
 		</div>
+		</h:form>
 	</div>
-	<!-- end #header -->
-	<div id="menu">
-		<ul>
-			<h:form>
-				<li><h:commandLink action="#{controladorNavegacion.showPage}"
-						value="Login">
-						<f:param name="pageId" value="1" />
-					</h:commandLink></li>
-				<li><h:commandLink action="#{controladorNavegacion.showPage}"
-						value="Consultar usuarios">
-						<f:param name="pageId" value="3" />
-					</h:commandLink></li>
-			</h:form>
-		</ul>
-	</div>
+	</nav>
 	<!-- end #menu -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		type="text/javascript" xml:space="preserve"></script>
 </body>
 </html>
