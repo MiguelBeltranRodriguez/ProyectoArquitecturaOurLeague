@@ -12,6 +12,10 @@
 		<display-name>index.xhtml</display-name>
 		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
+			<from-outcome>adicionarUsuarios</from-outcome>
+			<to-view-id>/adicionarUsuarios.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>ingreso</from-outcome>
 			<to-view-id>/ingreso.xhtml</to-view-id>
 		</navigation-case>
