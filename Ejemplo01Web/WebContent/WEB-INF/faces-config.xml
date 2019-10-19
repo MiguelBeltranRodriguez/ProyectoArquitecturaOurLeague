@@ -112,4 +112,8 @@
 			<to-view-id>/index.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+		<display-name>pago.xhtml</display-name>
+		<from-view-id>/pago.xhtml</from-view-id>
+	</navigation-rule>
 </faces-config>
