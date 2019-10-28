@@ -1,0 +1,10 @@
+.imagenes img{
+	heigth:100px;
+	width:100px;
+}
+
+.escudos, .imagenes{
+	display:flex;
+	justify-content: center;
+}
+

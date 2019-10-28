@@ -19,6 +19,14 @@
 			<from-outcome>ingreso</from-outcome>
 			<to-view-id>/ingreso.xhtml</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>pago</from-outcome>
+			<to-view-id>/pago.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>compra</from-outcome>
+			<to-view-id>/compra.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>ingreso.xhtml</display-name>
@@ -115,5 +123,9 @@
 	<navigation-rule>
 		<display-name>pago.xhtml</display-name>
 		<from-view-id>/pago.xhtml</from-view-id>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>compra.xhtml</display-name>
+		<from-view-id>/compra.xhtml</from-view-id>
 	</navigation-rule>
 </faces-config>
