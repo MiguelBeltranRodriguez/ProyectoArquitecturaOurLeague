@@ -27,6 +27,8 @@ public class ControladorNavegacion implements Serializable {
 	      }
 	      
 	      switch(pageId) {
+	      	case "0":
+	      		 return "index";
 	      	case "1":
 		        return "ingreso";
 	      	case "2":
@@ -38,13 +40,11 @@ public class ControladorNavegacion implements Serializable {
 	      	case "5":
 	      		return "compra";
 	      	case "6":
-		      	break;
+		      	return "seleccionarAsientos";
 		    default:
 		        return "index";
 	      }
-		return "index";
-	      
-	     	      
+	      	     	      
 	   }
 
 	public String getPageId() {
