@@ -23,7 +23,11 @@ public class Controlador {
 	@EJB
 	public Usuario nuevoUsuario;
 	
-	public List<Usuario> listaUsuarios;	
+	public List<Usuario> listaUsuarios;
+	
+ 	public int idPartido;
+	//public Equipo local;
+	//public Equipo visitante;
 
 	public String x = "https://www.stickpng.com/assets/images/584a9b3bb080d7616d298777.png";
 	public String y = "https://i.pinimg.com/originals/14/83/68/1483685fe60a018dbd6372815363538c.png";
@@ -75,6 +79,41 @@ public class Controlador {
 	public String loginExito() {
 		return "aceptar";
 	}
+	
+	
+	/*
+	public List<Eventos> listaPartidos ()
+	{
+		List<Eventos> partidos= new ArrayList<Eventos>();
+		LocalizadorServicios localizadorServicios = new LocalizadorServicios();
+		FachadaLogicaBeanRemote fachadaLogica = localizadorServicios.getServicio1();
+		
+		// Invoca el servicio remoto
+		listaPartidos = fachadaLogica.getPartidosPaginados(1, 10);
+		
+		for(Usuario partido : listaUsuarios) {
+			//Estadio estadio = partido.getEstadio();
+			//String nombre = estadio.getNombre();
+			//Date fecha = partido.getFecha();
+			// local = partido.getEquipo1();
+			//visitante = partido.getEquipo2();
+			Evento e = new Evento (partido.getIdPartido(),local.getNombre(),visitante.getNombre(),estadio.getNombre(),partido.getFecha();
+			
+			partidos.add(e);
+			
+		}
+		
+		return partidos;
+	}
+	
+	
+	public String compraPartido(Evento e){
+		this.idPartido = e.getId();
+		return "valido";
+	
+	}
+	*/
+
 	
 	public String insertarUsuario() {
 		// Invoca el localizador de servicios para obtener la fachada remota

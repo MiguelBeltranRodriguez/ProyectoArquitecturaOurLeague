@@ -95,30 +95,47 @@
 	
 	<br></br>
 	
-	
-	<div class="escudos">      	
-			<div class="card" style="width: 18rem;">
-		    <div class="imagenes">
-		    <img src="#{controlador.x}" class="card-img-top" alt="..."/>
-		 	<img src="#{controlador.y}" class="card-img-top" alt="..."/>
-		  </div>
-		  <div class="card-body">
-		    <h5 class="card-title">Millonarios vs Santafe</h5>
-		    
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		   	
+	<h:dataTable value="#{controlador.orderList}" var="o"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Id evento</f:facet>
+    				<!-- row record -->
+    				#{o.id}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Partido</f:facet>
+    				#{o.nombre1} vs #{o.nombre2}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Ubicación</f:facet>
+    				#{o.estadio}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Fecha</f:facet>
+    				#{o.fecha}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Comprar</f:facet>
+    				<h:commandButton class="btn btn-dark btn-block" value="Login"  style="margin-top:8px;"
+					action="#{controlador.listaPartido(item)}"></h:commandButton>
+    			</h:column>
+    		
+    		</h:dataTable>
+			   	
 		    		    		<h:form>
 		    		   
 		    			<h:commandLink class="btn btn-success btn-block"  action="#{controladorNavegacion.showPage}"
 							value="Comprar boletos">
 							<f:param name="pageId" value="6" />
 						</h:commandLink>
-								</h:form>
-						
-		    
-		  </div>
-		</div>				
-	</div>
+								</h:form>			
+	
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" type="text/javascript"
     xml:space="preserve"></script>
