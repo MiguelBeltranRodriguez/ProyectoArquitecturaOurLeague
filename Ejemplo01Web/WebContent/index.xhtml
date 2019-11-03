@@ -15,16 +15,16 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous" />
 	<style type="text/css" media="screen">
-@import 'style.css';
+@import 'css/index.css';
 </style>
-<title>Pagina de inicio</title>
+<title>Página de inicio</title>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	<div class="container">
 		<a class="navbar-brand" href="#"> <img
-			src="images/tick.jpg" alt="Logo" style ="width:60px;border-radius:10%"/>
+			src="images/boleto.jpg" alt="Logo" style ="width:60px;border-radius:10%"/>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -35,17 +35,29 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 		
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				
-					<li class="nav-item active"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+					
+					<li class="elementosnav"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+							value="Home">
+							<f:param name="pageId" value="0" />
+						</h:commandLink>
+					</li>
+
+					<li class="elementosnav"><h:commandLink class="nav-link" value="Compra" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="5" />
+					</h:commandLink></li>
+					<li class="elementosnav"><h:commandLink class="nav-link" value="Pago" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="4" />
+					</h:commandLink></li>
+					
+					
+					<li class="elementosnav"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
 							value="Login">
 							<f:param name="pageId" value="1" />
 						</h:commandLink></li>
-					<li class="nav-item active"><h:commandLink class="nav-link" value="Registro" action="#{controladorNavegacion.showPage}">
+					<li class="elementosnav"><h:commandLink class="nav-link" value="Registro" action="#{controladorNavegacion.showPage}">
 						<f:param name="pageId" value="2" />
 					</h:commandLink></li>
+					
 			
 			</ul>
 				
@@ -53,6 +65,14 @@
 		</h:form>
 	</div>
 	</nav>
+	
+	<header class="jumbotron my-4">
+      <h1 class="display-3">¡Bienvenido!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+    </header>
+	
+	
 	<!-- end #menu -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		type="text/javascript" xml:space="preserve"></script>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15722885456640" configfile="/Ejemplo01Web/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="554" y="1169" id="pf15722886314361" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" outlinks="pf15722886314362 pf15722886314363 pf15722886314364 pf157228863620826 pf157228902984928" inlinks="pf15722886314366 pf15722886314367 pf15722886314368" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="adicionarUsuarios.xhtml" x="770" y="380" id="pf15722886314409" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" outlinks="pf157228863144010 pf157228863144011" inlinks="pf15722886314362 pf157228863144012 pf157228863144013" path="/adicionarUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ingreso.xhtml" x="122" y="380" id="pf157228863144014" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf157228863144015 pf157228863144012 pf157228863144016" inlinks="pf15722886314363 pf157228863144017" path="/ingreso.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="loginError.xhtml" x="338" y="178" id="pf157228863144018" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf157228863144017" inlinks="pf157228863144015" path="/loginError.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="loginExito.xhtml" x="338" y="967" id="pf157228863144019" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf15722886314366" inlinks="pf157228863144016" path="/loginExito.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="insertarExito.xhtml" x="338" y="583" id="pf157228863144020" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf15722886314367" inlinks="pf157228863144010" path="/insertarExito.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="insertarError.xhtml" x="554" y="178" id="pf157228863144021" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf157228863144013" inlinks="pf157228863144011" path="/insertarError.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listadoUsuarios.xhtml" x="770" y="1372" id="pf157228863144222" referenceLink="//@navigationRule.10/@fromViewId|" outlinks="pf157228863144223" inlinks="pf15722886314364" path="/listadoUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarUsuarios.xhtml" x="338" y="1372" id="pf157228863144224" referenceLink="//@navigationRule.11/@fromViewId|" outlinks="pf15722886314368" inlinks="pf157228863144223" path="/listarUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pago.xhtml" id="pf157228863621227" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf157228863620826" path="/pago.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="compra.xhtml" id="pf157228902985029" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf157228902984928" path="/compra.xhtml"/>
+  <links id="pf15722886314362" target="pf15722886314409" source="pf15722886314361" outcome="adicionarUsuarios"/>
+  <links id="pf15722886314363" target="pf157228863144014" source="pf15722886314361" outcome="ingreso"/>
+  <links id="pf157228863144015" target="pf157228863144018" source="pf157228863144014" outcome="fracaso"/>
+  <links id="pf157228863144012" target="pf15722886314409" source="pf157228863144014" outcome="adicionarUsuarios"/>
+  <links id="pf157228863144016" target="pf157228863144019" source="pf157228863144014" outcome="exito"/>
+  <links id="pf157228863144017" target="pf157228863144014" source="pf157228863144018" outcome="reintentar"/>
+  <links id="pf15722886314366" target="pf15722886314361" source="pf157228863144019" outcome="aceptar"/>
+  <links id="pf157228863144010" target="pf157228863144020" source="pf15722886314409" outcome="insertado"/>
+  <links id="pf157228863144011" target="pf157228863144021" source="pf15722886314409" outcome="existe"/>
+  <links id="pf15722886314367" target="pf15722886314361" source="pf157228863144020" outcome="aceptar"/>
+  <links id="pf157228863144013" target="pf15722886314409" source="pf157228863144021" outcome="reintentar"/>
+  <links id="pf15722886314364" target="pf157228863144222" source="pf15722886314361" outcome="listadoUsuarios"/>
+  <links id="pf157228863144223" target="pf157228863144224" source="pf157228863144222" outcome="exito"/>
+  <links id="pf15722886314368" target="pf15722886314361" source="pf157228863144224" outcome="aceptar"/>
+  <links id="pf157228863620826" target="pf157228863621227" source="pf15722886314361" outcome="pago"/>
+  <links id="pf157228902984928" target="pf157228902985029" source="pf15722886314361" outcome="compra"/>
+</pageflow:Pageflow>

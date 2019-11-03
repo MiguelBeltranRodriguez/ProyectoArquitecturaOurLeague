@@ -13,6 +13,49 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	<div class="container">
+		<a class="navbar-brand" href="#"> <img
+			src="images/boleto.jpg" alt="Logo" style ="width:60px;border-radius:10%"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarResponsive" aria-controls="navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<h:form>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				
+					
+				
+					<li class="nav-item active"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+							value="Login">
+							<f:param name="pageId" value="1" />
+						</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Registro" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="2" />
+					</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Compra" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="5" />
+					</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Pago" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="4" />
+					</h:commandLink></li>
+					
+			
+			</ul>
+				
+		</div>
+		</h:form>
+	</div>
+	</nav>
+
+
 	<div id="header">
 		<div id="logo">
 			<h1>Arquitectura de Software</h1>

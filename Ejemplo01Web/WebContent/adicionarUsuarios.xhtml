@@ -7,33 +7,74 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-<title>Pagina de ingreso</title>
+<title>Página de ingreso</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
-
+<style type="text/css" media="screen">
+@import 'css/adicionarUsuarios.css';
+</style>
 </head>
 
 <h:body>
-	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	<div class="container">
+		<a class="navbar-brand" href="#"> <img
+			src="images/boleto.jpg" alt="Logo" style ="width:60px;border-radius:10%"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarResponsive" aria-controls="navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<h:form>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+		
+			<ul class="navbar-nav ml-auto">
+				
+					<li class="nav-item active"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+							value="Home">
+							<f:param name="pageId" value="0" />
+						</h:commandLink>
+					</li>
+				
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Compra" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="5" />
+					</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Pago" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="4" />
+					</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link"  action="#{controladorNavegacion.showPage}"
+							value="Login">
+							<f:param name="pageId" value="1" />
+						</h:commandLink></li>
+					<li class="nav-item active"><h:commandLink class="nav-link" value="Registro" action="#{controladorNavegacion.showPage}">
+						<f:param name="pageId" value="2" />
+					</h:commandLink></li>
+			
+			</ul>
+				
+		</div>
+		</h:form>
+	</div>
+	</nav>
 	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Sign Up</h1>
       <p class="lead">Llena este simple formulario y vuelvete cliente de TuTicket</p>
-      <img class="mb-4" src=" http://dxtcapital.com/wp-content/uploads/Colombia-Soccer-Cup-logo.jpg" alt="" width="130"/>
     </div>
    
 	<!-- end #menu -->
 	<h:form>
 		<div class="row justify-content-center align-items-center h-100" >
 	    	<div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-			<h:outputLabel >Nombre :</h:outputLabel> 
+			<h:outputLabel > <strong>Nombre :</strong></h:outputLabel> 
 			<h:inputText class="form-control" value="#{controlador.nuevoUsuario.nombres}" />
-			<h:outputLabel value="Apellidos :" />
+			<h:outputLabel ><strong>Apellidos :</strong></h:outputLabel> 
 			<h:inputText class="form-control" value="#{controlador.nuevoUsuario.apellidos}" />
-			<h:outputLabel value="Usuario(UserName) : " />
+			<h:outputLabel ><strong>Usuario :</strong></h:outputLabel> 
 			<h:inputText  class="form-control" value="#{controlador.nuevoUsuario.userName}" />
-			<h:outputLabel value="Clave(Password) : " />
+			<h:outputLabel><strong>Contraseña :</strong></h:outputLabel> 
 			<h:inputSecret class="form-control" value="#{controlador.nuevoUsuario.password}" />
 			
-			<h:commandButton class="btn btn-lg btn-primary btn-block" value="Registrarse" style="margin-top:8px;"
+			<h:commandButton class="btn btn-dark btn-block" value="Registrarse" style="margin-top:8px;"
 			action="#{controlador.insertarUsuario()}" />
 		</div>
 		</div>

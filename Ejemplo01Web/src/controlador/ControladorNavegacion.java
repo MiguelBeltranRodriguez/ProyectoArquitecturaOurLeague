@@ -26,15 +26,25 @@ public class ControladorNavegacion implements Serializable {
 	         return "index";
 	      }
 	      
-	      if(pageId.equals("1")) {
-	         return "ingreso";
-	      }else if(pageId.equals("2")) {
-	         return "adicionarUsuarios";
-	      }else if(pageId.equals("3")) {
-		     return "listadoUsuarios";
-	      }else {
-	         return "index";
+	      switch(pageId) {
+	      	case "0":
+	      		 return "index";
+	      	case "1":
+		        return "ingreso";
+	      	case "2":
+		         return "adicionarUsuarios";
+	      	case "3":
+			     return "listadoUsuarios";
+	      	case "4":
+		    	 return "pago";
+	      	case "5":
+	      		return "compra";
+	      	case "6":
+		      	return "seleccionarAsientos";
+		    default:
+		        return "index";
 	      }
+	      	     	      
 	   }
 
 	public String getPageId() {

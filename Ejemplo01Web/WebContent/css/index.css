@@ -1,0 +1,13 @@
+body{
+	background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/86/72/4157cfcc9b5ab2c.jpg);
+	background-size:cover;
+   background-repeat:no-repeat;
+
+}
+
+button{
+ margin-left: 30px;
+ border-radius: 8px;
+ margin-right: 30px;
+}
+

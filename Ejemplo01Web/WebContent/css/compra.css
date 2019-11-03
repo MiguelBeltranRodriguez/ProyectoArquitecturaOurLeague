@@ -1,0 +1,14 @@
+.imagenes img{
+	heigth:100px;
+	width:100px;
+}
+
+.escudos, .imagenes{
+	display:flex;
+	justify-content: center;
+}
+
+.carousel-item img{
+	width: 100%;
+  	height: 450px;
+}

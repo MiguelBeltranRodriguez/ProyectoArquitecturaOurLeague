@@ -1,0 +1,10 @@
+body{
+	background-image: url(https://img.freepik.com/foto-gratis/luces-noche-representacion-3d-estadio-futbol_3544-1085.jpg?size=626&ext=jpg);
+	background-size:cover;
+   background-repeat:no-repeat;
+
+}
+
+p, h1{
+	color:white;
+}
